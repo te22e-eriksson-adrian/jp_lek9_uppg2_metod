@@ -9,9 +9,28 @@ public class App {
         String svar2 = capitalize("z");
         System.out.println("Gemenen 'z' är "+svar2+" som versal.");
         System.out.println("     ");
+
+        //B
+        int tal = 2;
+        boolean svar3 = ärPrimtal(tal);
+        System.out.println("Är "+tal+" ett primtal?: "+svar3);
     }
     static String capitalize(String gemen){
         String versal = gemen.toUpperCase();
         return versal;
+    }
+    static boolean ärPrimtal(int tal){
+        for (int täljare = 1; täljare<10; täljare++)
+        {
+            if(täljare==tal){
+                continue;
+            }
+            double rest = tal%täljare;
+            if (rest==0) {
+                return false;
+            }
+            
+        }
+        return true;
     }
 }
