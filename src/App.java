@@ -14,6 +14,12 @@ public class App {
         int tal = 2;
         boolean svar3 = ärPrimtal(tal);
         System.out.println("Är "+tal+" ett primtal?: "+svar3);
+
+        //C
+        int bas = 2;
+        int exponent = 3;
+        int svar4 = potens(bas, exponent);
+        System.out.println(bas+" upphöjt till "+exponent+" är lika med: "+svar4);
     }
     static String capitalize(String gemen){
         String versal = gemen.toUpperCase();
@@ -32,5 +38,12 @@ public class App {
             
         }
         return true;
+    }
+    static int potens(int bas, int exponent){
+        int utrakningssvar = 1;
+        for (int antal = 1; antal<=exponent; antal++){
+            utrakningssvar = utrakningssvar*bas;
+        }
+        return utrakningssvar;
     }
 }
